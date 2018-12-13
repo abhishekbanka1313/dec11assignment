@@ -6,13 +6,57 @@
     <title>Welcome to the Football world</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Importing Custom CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 </head>
+
+<style>
+    body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: White;
+}
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: black;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 1;
+}
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+.dropdown-menu li a {
+    color: #000 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+</style>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--navigation bar with drop down menu-->
@@ -24,6 +68,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <img src="https://www.premierleague.com/resources/ver/i/elements/premier-league-logo-header.png" height="50rem"
+                    width="50rem">
                 <a class="navbar-brand" href="#myPage"><b>Premier League</b></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -49,6 +95,8 @@
             </div>
         </div>
     </nav>
+
+
     <!--Carousel Usage-->
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -63,7 +111,7 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img src="https://d3vlf99qeg6bpx.cloudfront.net/content/uploads/2018/12/11073130/Jurgen.Klopp-51.jpg"
-                    alt="Jurgen Klopp" width="1100" height="500">
+                    alt="Jurgen Klopp" width="1200" height="700">
                 <div class="carousel-caption" style="background: url(https://media.wnyc.org/i/800/0/l/85/1/blackbox.jpeg);opacity: 0.8;">
                     <b>
                         <h3>Jurgen Klopp</h3>
@@ -73,7 +121,7 @@
             </div>
             <div class="item">
                 <img src="http://footballnewscentral.com/wp-content/uploads/2018/11/r460419_1296x729_16-9.jpg&site=espnfc-800x445.jpg&site=espnfc"
-                    alt="Jose Mourinho" width="1100" height="500">
+                    alt="Jose Mourinho" width="1200" height="700">
                 <div class="carousel-caption" style="background: url(https://media.wnyc.org/i/800/0/l/85/1/blackbox.jpeg);opacity: 0.8;">
                     <b>
                         <h3>Jose Mourinho</h3>
@@ -107,7 +155,7 @@
 
     <!-- Jumbotron usage -->
     <div id="animeList" class="container">
-        <div class="jumbotron" style="background-color: black;">
+        <div class="jumbotron" style="background-color: lightblue;">
             <h1>English Premier League </h1>
             <p>Check out about your favourite English premier league</p>
         </div>
@@ -116,7 +164,7 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/170px-Liverpool_FC.svg.png"
-                        width="400" height="300">
+                        width="200" height="200">
                     <p><strong>Liverpool</strong></p>
                     <p>The Reds</p>
                     <button class="btn" data-toggle="modal" data-target="#myModal">Click here</button>
@@ -125,7 +173,7 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/220px-Manchester_United_FC_crest.svg.png"
-                        width="400" height="300">
+                        width="200" height="200">
                     <p><strong>Manchester United</strong></p>
                     <p>The Red Devils</p>
                     <button class="btn" data-toggle="modal" data-target="#myModal">Click here</button>
@@ -134,7 +182,7 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/200px-Manchester_City_FC_badge.svg.png"
-                        width="400" height="300">
+                        width="200" height="200">
                     <p><strong>Manchester City</strong></p>
                     <p>The Citizens</p>
                     <button class="btn" data-toggle="modal" data-target="#myModal">Click here</button>
@@ -145,7 +193,7 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/200px-Chelsea_FC.svg.png"
-                        width="400" height="300">
+                        width="200" height="200">
                     <p><strong>Chelsea</strong></p>
                     <p>The Blues</p>
                     <button class="btn" data-toggle="modal" data-target="#myModal">CLick here</button>
@@ -154,7 +202,7 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/180px-Arsenal_FC.svg.png"
-                        alt="New York" width="400" height="300">
+                        alt="New York" width="200" height="200">
                     <p><strong>Arsenal</strong></p>
                     <p>The Gunners</p>
                     <button class="btn" data-toggle="modal" data-target="#myModal">Click here</button>
@@ -163,51 +211,51 @@
             <div class="col-sm-4">
                 <div class="thumbnail">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/100px-Tottenham_Hotspur.svg.png"
-                        width="400" height="300">
+                        width="200" height="200">
                     <p><strong>Tottenham Hotspur</strong></p>
                     <p>The Lillywhites</p>
+                    <!--Button of the modal-->
                     <button class="btn" data-toggle="modal" data-target="#myModal">Click here</button>
-
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-
-    </div>
-
-    <!--Usage of modal box-->
-    <div class="container">
-        <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            Click to know about top scorer
-        </button>
-
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
-            <div class="modal-dialog modal-dialog-centered">
+                <!-- Modal content-->
                 <div class="modal-content">
-
-                    <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Mohammed Salah and Pierre-Emerick Aubameyang</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4><span class="glyphicon"></span> Sign In</h4>
                     </div>
-
-                    <!-- Modal body -->
                     <div class="modal-body">
-
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23
+                                    per person</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="USERNAME">
+                            </div>
+                            <div class="form-group">
+                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+                                <input type="password" class="form-control" id="psw" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-block" style="background-color:red">Sign In
+                            </button>
+                        </form>
                     </div>
-
-                    <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span> Cancel
+                        </button>
+                        <p>Need <a href="#">help?</a></p>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
 
+
+    </div>
 
 
     <!-- Footer -->
@@ -215,8 +263,18 @@
         <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a><br><br>
-        <p>Click the arrow mark to go to the Top of the page</p>
-        <p>English Premier League</p>
+        <p>Click the above arrow mark to go to the top of the pagw</p>
+        <div class="container-fluid m-0 p-0">
+            <h2>Your Present Location</h2>
+
+            <!--Google map-->
+            <div id="map-container-google-4" class="z-depth-1-half map-container-4" style="height: 500px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.569209114346!2d77.61175141482164!3d12.93538629087964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144e0c7d418f%3A0x48d008360cebcde4!2sStackroute!5e0!3m2!1sen!2sin!4v1544674584695"
+                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+        
     </footer>
 
 </body>
