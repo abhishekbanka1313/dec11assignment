@@ -24,16 +24,19 @@ h3, h4 {
 .carousel-caption h3 {
     color: #fff !important;
 }
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-
-  #map-container-google-4 {
-      width: 10epm;
-      height :10epm;
-  }
-}
+.map-container-3{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container-3 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
 .bg-1 {
     background: #2d2d30;
     color: #bdbdbd;
@@ -105,4 +108,13 @@ footer a:hover {
 }
 textarea {
     resize: none;
+}
+@media (max-width: 450px) {
+    .carousel {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+ }
+
+ .nav-tabs li a {
+    color:red;
 }

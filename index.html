@@ -16,12 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-</head>
-
-<style>
-    body {
-    font: 400 15px/1.8 Lato, sans-serif;
+    
     color: White;
 }
 .navbar {
@@ -54,7 +49,7 @@
     color: #000 !important;
 }
 .dropdown-menu li a:hover {
-    background-color: red !important;
+    background-color: blue !important;
 }
 </style>
 
@@ -81,7 +76,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>POPULAR</b>
                             <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="background-color: aqua">
                             <li><a href="#">Mohammed Salah</a></li>
                             <li><a href="#">Kevin De Bruyne</a></li>
                             <li><a href="#">Eden Hazard</a></li>
@@ -264,17 +259,16 @@
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a><br><br>
         <p>Click the above arrow mark to go to the top of the pagw</p>
-        <div class="container-fluid m-0 p-0">
+        <div class="container-fluid">
             <h2>Your Present Location</h2>
 
             <!--Google map-->
-            <div id="map-container-google-4" class="z-depth-1-half map-container-4" style="height: 500px">
+            <div id="map-container-google-3" class="z-depth-1-half map-container-3">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.569209114346!2d77.61175141482164!3d12.93538629087964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144e0c7d418f%3A0x48d008360cebcde4!2sStackroute!5e0!3m2!1sen!2sin!4v1544674584695"
-                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-
         </div>
-        
+
     </footer>
 
 </body>
